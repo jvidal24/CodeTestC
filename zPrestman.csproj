@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5DE24B9-AD11-4901-AB18-E7B8230D831F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>zPrestman</RootNamespace>
+    <AssemblyName>zPrestman</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\addClausula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\addClausula.Designer.cs">
+      <DependentUpon>addClausula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewsCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\viewsCliente.Designer.cs">
+      <DependentUpon>viewsCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\vCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\vCliente.Designer.cs">
+      <DependentUpon>vCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewsSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\viewsSolicitud.Designer.cs">
+      <DependentUpon>viewsSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\vSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\vSolicitud.Designer.cs">
+      <DependentUpon>vSolicitud.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\addClausula.resx">
+      <DependentUpon>addClausula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\viewsCliente.resx">
+      <DependentUpon>viewsCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\vCliente.resx">
+      <DependentUpon>vCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\viewsSolicitud.resx">
+      <DependentUpon>viewsSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\vSolicitud.resx">
+      <DependentUpon>vSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prestamos_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cobros_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitudes_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_solicitud_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitud_aprobadas_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitud_denegadas_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitudes_adm_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitud_pendientes_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zPrestmanLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feriados_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raining-money.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_circled_12px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_circled_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_circled_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instagram_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter_circled_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar Circled_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_phone_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_property_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\look_client_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_clausula_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interest_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuota_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft_excel_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_counter_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DBFS.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DBFSlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prestamostotal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitudestotal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientestotal.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
